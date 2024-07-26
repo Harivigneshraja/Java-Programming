@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+    public static int angle(int h,int m)
+    {
+        if(h>0&&m>0&&m<60&&h<12)
+        return -1;
+        if(h==12)
+        h=0;
+        if(m==60)
+        {
+            m=0;
+            h=h+1;
+            if(h>12)
+            h=h-12;
+        }
+        int res=(int)Math.abs(30*h-5.5*m);
+        res=Math.min(360-res,res);
+        return res;
+    }
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int h=sc.nextInt();
+		int m=sc.nextInt();
+		int res=angle(h,m);
+		if(res==-1)
+		System.out.println("weong input");
+		else
+		System.out.println(res);
+	}
+}
