@@ -1,6 +1,6 @@
 import java.util.*;
 public class Main
-{
+{ 
     public static int angle(int h,int m)
     {
         if(h>0&&m>0&&m<60&&h<12)
